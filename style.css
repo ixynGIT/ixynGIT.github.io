@@ -1,0 +1,20 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,500,600,700);
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+}
+
+.name{
+    font-size: 8vw;
+    font-family: Raleway;
+    color: white;
+}
