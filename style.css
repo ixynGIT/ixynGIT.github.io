@@ -1,20 +1,383 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,500,600,700);
 
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: black;
+html {
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
-.header{
-    padding: 0;
-    margin: 0;
+header {
+  min-height: 100vh;
+  position: relative;
+  background-color: #121212; /* Google recommended background color */
 }
 
-.name{
+#nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: calc(1vw + 1vh + 0.5vmin);
+}
+
+.header {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+
+.name {
+  font-size: 110px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.firstLine,
+.secondLine,
+.lastLine {
+  display: inline-block;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.firstLine p,
+.secondLine p,
+.lastLine p {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(8) forwards,
+    cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes removeCursor {
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Specific delays for sequential animation */
+.firstLine {
+  animation: show 0s forwards;
+  animation-delay: 0s;
+}
+
+.firstLine p {
+  animation: typing 2s steps(8) forwards,
+    cursor 0.4s step-end infinite alternate 2s, removeCursor 0s 2s forwards;
+}
+
+.secondLine {
+  animation: show 0s forwards;
+  animation-delay: 2.5s;
+}
+
+.secondLine p {
+  animation: typing 2s steps(8) forwards 2.5s,
+    cursor 0.4s step-end infinite alternate 4.5s, removeCursor 0s 4.5s forwards;
+}
+
+.lastLine {
+  animation: show 0s forwards;
+  animation-delay: 5s;
+}
+
+.lastLine p {
+  animation: typing 2s steps(8) forwards 5s,
+    cursor 0.4s step-end infinite alternate 7s, removeCursor 0s 7s forwards;
+}
+
+.name.header > * {
+}
+
+main {
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+#intro {
+  font-weight: 700;
+  text-align: left;
+  color: #121212;
+  font-size: 5.2vw;
+  font-family: "Raleway", sans-serif;
+  cursor: default;
+}
+
+#scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  font-size: 60px; /* 36px */
+  cursor: pointer;
+  color: #f06060;
+  display: none;
+}
+
+#skills-title,
+#portfolio-title,
+#certification-title {
+  font-size: 6vw;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #121212;
+}
+#contacts-title {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #121212;
+}
+
+.skills-sec {
+  position: relative;
+  min-height: 100vh;
+}
+
+#skills-content {
+  padding: 20px;
+  margin-top: 30px;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+#skills-content > * {
+  display: flex;
+}
+
+.portfolio-sec {
+  min-height: 100vh;
+}
+
+#carouselExampleControls {
+  height: auto !important;
+}
+
+.carousel-item {
+  filter: brightness(50%);
+}
+.carousel-caption {
+  filter: opacity(70%);
+}
+.certification-sec {
+  min-height: 100vh;
+}
+
+.advanced {
+  background-color: #d6bd98;
+}
+
+.text-white {
+  margin-left: 20px;
+}
+
+#nav li > * {
+  text-decoration: none;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding-bottom: 5px;
+  position: relative;
+  width: max-content;
+}
+
+#nav li > *::after {
+  content: "";
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 0, 0));
+  height: 4px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 100ms;
+}
+
+#nav li > *:hover::after {
+  width: 100%;
+}
+
+.skills-legend {
+  display: flex;
+  font-size: 0.65em;
+  width: 100%;
+  justify-content: space-around;
+}
+.padding {
+  display: block;
+  padding: 50px;
+}
+
+#chartContainer {
+  margin: auto;
+  width: 70vw;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+#chart {
+  width: 100%;
+  height: 100%;
+}
+.fa.fa-bars {
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+
+.portfolio-sec .d-block {
+  max-height: 80vh;
+  margin: auto;
+}
+
+.carousel {
+  max-width: 75%;
+  margin: auto;
+}
+
+#certification-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+#contacts-content {
+  padding: 20px 0;
+}
+
+#contacts-content a {
+  text-decoration: none;
+  color: #121212;
+  padding-bottom: 5px;
+  position: relative;
+  width: max-content;
+}
+
+#contacts-content a::after {
+  content: "";
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 0, 0));
+  height: 4px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 100ms;
+}
+
+#contacts-content a:hover::after {
+  width: 100%;
+}
+
+.carousel-item:hover {
+  filter: brightness(100%) !important;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 1210px) {
+}
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 15vw;
+  }
+  main {
+    font-size: 13vw;
+  }
+  #intro {
+    padding: 0 !important;
+    margin: 0 !important;
     font-size: 8vw;
-    font-family: Raleway;
-    color: white;
+  }
+  #skills-title,
+  #portfolio-title,
+  #certification-title {
+    font-size: 12vw;
+  }
+  .padding {
+    display: none;
+  }
+  #contacts-content {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: 15vw;
+  }
+  main {
+    font-size: 13vw;
+  }
+  #intro {
+    font-size: 10vw;
+  }
+  .padding {
+    display: none;
+  }
+  .portfolio-sec {
+    padding-bottom: 40px;
+    min-height: fit-content;
+  }
+  .portfolio-sec,
+  .certification-sec {
+    padding-bottom: 40px;
+    min-height: fit-content;
+  }
+  #contacts-content {
+    text-align: center;
+    font-size: 4vw;
+  }
+  #scroll-to-top {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .padding {
+    display: none;
+  }
 }

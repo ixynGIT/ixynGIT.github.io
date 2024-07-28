@@ -1,15 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plasabas' Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script defer src="function.js"></script>
-</head>
-<body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
-        <h1 class="name header">HI, I AM CHRISTIAN PLASABAS</h1>
+      <div class="headerNav">
+        <a
+          href="#"
+          class="text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseMenu"
+          aria-expanded="false"
+          aria-controls="collapseMenu"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <div class="collapse collapseMenu" id="collapseMenu">
+          <ul class="list-unstyled" id="nav">
+            <li>
+              <a href="#intro"><span>About</span></a>
+            </li>
+            <li>
+              <a href="#skills-title"><span>Skills</span></a>
+            </li>
+            <li>
+              <a href="#portfolio-title"><span>Porfolio</span></a>
+            </li>
+            <li>
+              <a href="#certification-title"><span>Certification</span></a>
+            </li>
+            <li>
+              <a href="#contacts-title"><span>Contacts</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="name header"><div class="firstLine"><p>HI, I AM</p></div> <div class="secondLine"><p>CHRISTIAN</p></div> <div class="lastLine"><p>PLASABAS</p></div></h1>
     </header>
-</body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div id="intro">
+            I am an upcoming third year student. I am an aspiring backend developer because I like to configure server side of systems. Here is my coding journey so
+            far.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="padding"></div>
+
+    <section class="skills-sec">
+      <div class="container-fluid">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 id="skills-title">SKILLS</h2>
+          </div>
+          <div id="chartContainer">
+            <canvas id="chart"></canvas>
+          </div>
+      </div>
+    </section>
+
+    <div class="padding"></div>
+
+    <section class="portfolio-sec">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 id="portfolio-title">PORTFOLIO</h2>
+          </div>
+          <div class="col-xs-12">
+            <div id="porfolio-content">
+              <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="4"
+                    aria-label="Slide 5"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a
+                      target="_blank"
+                      href="https://github.com/ixynGIT/youtube-clone"
+                      ><img
+                        src="img/youtubeClone.png"
+                        alt="Youtube Clone"
+                        class="d-block w-80"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-black">
+                      <h5>Youtube Clone</h5>
+                      <p>Youtube Clone without functionalities</p>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      target="_blank"
+                      href="https://github.com/dongjilo/point-of-sale-system"
+                      ><img
+                        src="img/jun-ianez.png"
+                        alt="Jun-Ianez POS"
+                        class="d-block w-80"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-black">
+                      <h5>Jun-Ianez</h5>
+                      <p>Point of Sale System</p>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      target="_blank"
+                      href="https://github.com/ixynGIT/hotel-management-system"
+                      ><img
+                        src="img/chpatel.png"
+                        alt="Chpatel hotel management"
+                        class="d-block w-80"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-black">
+                      <h5>Chpatel</h5>
+                      <p>Hotel Management System</p>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      target="_blank"
+                      href="https://github.com/ixynGIT/task_management_system"
+                      ><img
+                        src="img/taskMaster.png"
+                        alt="Task Master task management"
+                        class="d-block w-80"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-black">
+                      <h5>TaskMaster</h5>
+                      <p>Task Management System</p>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      target="_blank"
+                      href="https://github.com/ixynGIT/cpp_projects/blob/main/FirstProject/main.cpp"
+                      ><img
+                        src="img/simpleGuessingGame.png"
+                        alt="Simple Guessing Game"
+                        class="d-block w-80"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-black">
+                      <h5>Simple Guessing Game</h5>
+                      <p>built in C++</p>
+                    </div>
+                  </a>
+                  </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding"></div>
+
+    <section class="certification-sec">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 id="certification-title">CERTIFICATION</h2>
+          </div>
+          <div class="col-xs-12">
+            <div id="certification-content">
+              <img src="img/certification.png" alt="networking certification" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding"></div>
+      
+    <footer>
+      <i
+        class="fa-solid fa-arrow-circle-up"
+        id="scroll-to-top"
+        onclick="topFunction()"
+      ></i>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 id="contacts-title">REACH ME AT</h2>
+          </div>
+          <div class="col-xs-12">
+            <div id="contacts-content">
+              <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                  <a
+                    target="_blank"
+                    class="facebook-link"
+                    href="https://www.facebook.com/crsplasabas/"
+                    ><i class="fa-brands fa-facebook"></i> Facebook</a
+                  >
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <a
+                    target="_blank"
+                    class="gmail-link"
+                    href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=ixynrs@gmail.com&tf=1"
+                    ><i class="fa-solid fa-envelope"></i> Gmail</a
+                  >
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <a
+                    target="_blank"
+                    class="github-link"
+                    href="https://github.com/ixynGIT"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <a
+                    target="_blank"
+                    class="twitter-link"
+                    href="https://x.com/raffyIC"
+                    ><i class="fa-brands fa-twitter"></i> Twitter / X</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="chart.js"></script>
+    <script src="jquery.js"></script>
+  </body>
 </html>
