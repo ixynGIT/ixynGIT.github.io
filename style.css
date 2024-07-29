@@ -358,12 +358,10 @@ main {
   .padding {
     display: none;
   }
-  .portfolio-sec {
-    padding-bottom: 40px;
-    min-height: fit-content;
-  }
+
   .portfolio-sec,
-  .certification-sec {
+  .certification-sec,
+  .skills-sec {
     padding-bottom: 40px;
     min-height: fit-content;
   }
@@ -373,6 +371,14 @@ main {
   }
   #scroll-to-top {
     font-size: 40px;
+  }
+  #chartContainer {
+    width: 100%;
+  }
+  .portfolio-sec .d-block {
+    width: 100% !important;
+    min-height: 100% !important;
+    margin: auto;
   }
 }
 
