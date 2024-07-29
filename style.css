@@ -139,7 +139,7 @@ main {
   text-align: left;
   color: #121212;
   font-size: 5.2vw;
-  font-family: "Raleway", sans-serif;F
+  font-family: "Raleway", sans-serif;
   cursor: default;
 }
 
@@ -380,10 +380,12 @@ main {
     min-height: 100% !important;
     margin: auto;
   }
-  #nav{
+  #nav {
     font-size: 4vw;
   }
-  
+  .fa.fa-bars {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
